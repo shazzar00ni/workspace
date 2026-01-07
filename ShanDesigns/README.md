@@ -29,6 +29,19 @@ A modern, single-page portfolio website showcasing Shannon Lockett's design work
 - **Routing**: React Router DOM
 - **Backend**: Express.js, MongoDB (for future API integration)
 
+## Important Notes
+
+### Express 5.x Migration
+
+The server now uses Express 5.x (upgraded from 4.x), which includes several breaking changes:
+
+- **Node.js Requirement**: Express 5.x requires Node.js version 18 or higher
+- **Route Matching**: The `path-to-regexp` library was upgraded from 0.1.x to 8.x, affecting how route patterns are matched. Regex-based routes may behave differently
+- **Promise Handling**: Promise rejections in middleware are now automatically caught and handled as errors
+- **Removed Dependencies**: Several deprecated dependencies have been removed (e.g., `array-flatten`, `methods`, `utils-merge`, `mime`)
+
+For more details on Express 5 breaking changes, see the [Express 5 migration guide](https://expressjs.com/en/guide/migrating-5.html).
+
 ## Getting Started
 
 ### Prerequisites
